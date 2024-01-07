@@ -1,0 +1,50 @@
+package linkedlist01;
+
+import java.util.*;
+
+public class BasicLinkedList {
+   
+	public static void main(String[] args){
+	
+		LinkedList<Integer> l1=new LinkedList<Integer>();
+		l1.add(3);
+		l1.add(5);
+		l1.add(8);
+		l1.add(1);
+		l1.add(null);
+		l1.add(2,13);
+		System.out.println(l1);
+		
+		l1.remove();
+		System.out.println(l1);
+        
+		l1.remove(3);
+		System.out.println(l1);
+		
+		System.out.println(l1.contains(5));
+    
+//		l1.sort(null);
+		
+		Iterator it=l1.iterator();
+		while(it.hasNext())
+		{
+			System.out.print(it.next()+" ");
+		}
+		
+		
+		// copy the elements from stack to LinkedList
+		System.out.println();
+		Stack<String> s1=new Stack<String>();
+		LinkedList<String> l2=new LinkedList<String>();
+		s1.push("hii");
+		s1.push("hello");
+		s1.push("everyone");
+		l2.addAll(s1);
+		Iterator it1=l2.iterator();
+		while(it1.hasNext())
+		{
+			System.out.print(it1.next()+" ");
+		}
+		
+  }
+}
